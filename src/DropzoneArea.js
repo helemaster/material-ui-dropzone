@@ -9,6 +9,9 @@ import {convertBytesToMbsOrKbs} from './helpers/helpers'
 import SnackbarContentWrapper from './SnackbarContentWrapper';
 import PreviewList from './PreviewList';
 import classNames from 'classnames';
+
+import { Typography } from "@material-ui/core";
+
 const styles = {
    '@keyframes progress': {
      '0%': {
@@ -179,9 +182,9 @@ class DropzoneArea extends Component{
                     maxSize={this.props.maxFileSize}
                      >
                     <div className={classes.dropzoneTextStyle}>
-                        <p className={classNames(classes.dropzoneParagraph,this.props.dropzoneParagraphClass)}>
+                        <Typography className={classNames(classes.dropzoneParagraph,this.props.dropzoneParagraphClass)}>
                             {this.state.dropzoneText}
-                        </p>
+                        </Typography>
                         <CloudUploadIcon className={classes.uploadIconSize}/>
                     </div>
                     {showPreviewsInDropzone &&
